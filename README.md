@@ -20,16 +20,23 @@ By transitioning to Continuous Integration on the AWS Cloud, our project aims to
 <h2>Flow of Execution</h2>
 
 <b>1.	CodeCommit Setup</b><br>
-a. Create a CodeCommit repository to store the source code.
+Create a CodeCommit repository to store the source code.
 <img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/CodeCommit.png">
-b. Create an IAM user with appropriate permissions for CodeCommit.
+
+Create an IAM user with appropriate permissions for CodeCommit.
 <img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/IAM.png">
 <img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/ARN.png">
 <img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/Policy.png">
-c. Generate SSH keys locally and associate them with the IAM user for secure access.
-    <b>ssh-keygen</b>
-<img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/CodeCommit.PNG">
-d. Transfer the source code from the existing GitHub repository to the CodeCommit repository and push the changes.
+
+Generate SSH keys locally and associate them with the IAM user for secure access.
+
+    ssh-keygen
+<img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/RSA.png">
+<img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/Upload-to-Cloud.png"> 
+
+    ssh -v git-codecommit.<region>.amazonaws.com
+<img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/Successfully.png"> 
+Transfer the source code from the existing GitHub repository to the CodeCommit repository and push the changes.
 <img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/CodeCommit.PNG">
 
 
