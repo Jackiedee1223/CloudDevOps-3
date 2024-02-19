@@ -19,40 +19,18 @@ By transitioning to Continuous Integration on the AWS Cloud, our project aims to
 
 <h2>Flow of Execution</h2>
 
-1.	Create Key pair for Beanstalk instance login: Generate a key pair that will be used for secure login to Elastic Beanstalk instance.
-2. Create Security Group for Amazon ElastiCache, RDS, and ActiveMQ: Define security groups to control inbound and outbound traffic for ElastiCache, RDS, and ActiveMQ instances.	 
-3.	Create RDS, Amazon ElastiCache, and Amazon ActiveMQ: Set up relational database (RDS), caching with ElastiCache, and the message broker with ActiveMQ.
-4.	Create Elastic Beanstalk Environment: Deploy and manage the application in an Elastic Beanstalk environment, allowing automatic scaling and easy application management.
-5. Update SG of backend to allow traffic from Bean SG: Adjust security group rules to permit traffic from Elastic Beanstalk security group to the backend services.	
-6.	Update SG of backend to allow internal traffic: Configure security groups to enable internal communication between components.
-7.	Launch EC2 instance for DB initializing: Start an EC2 instance dedicated to initializing and configuring RDS database.
-8. Login to the instance and initialize RDS DB: Access the EC2 instance to execute the necessary scripts or commands to initialize RDS database.	
-9.	Change health check on Beanstalk to login: Adjust the health check settings on Elastic Beanstalk to ensure it checks the login status or relevant indicators.
-10.	Add 443 https Listener to ELB: Enhance security by configuring a secure HTTPS listener on Elastic Load Balancer (ELB).
-11. Build Artifact with Backend Information: Compile an artifact containing the necessary information for the backend services.
-12. Deploy Artifact to Beanstalk: Use Elastic Beanstalk to deploy the compiled artifact, making the application available.
-13. Create CDN with SSL Cert: Establish a Content Delivery Network (CDN) and configure it with an SSL certificate for enhanced performance and security.
-14. Update Entry in GoDaddy DNS Zones: Update the DNS settings in GoDaddy account to point to the newly created CDN and ensure proper domain resolution.
-15. Test the URL: Conduct thorough testing to verify that the application is accessible and functioning correctly through the updated URL.
-
-
-
-
-<h2>Validation & Summarization</h2>
-<h4>Security Group & Key Pairs</h4>
-<h4>EC2 Instances</h4>
-<h4>Build and Deploy Artifacts</h4>
-<h4>Load Balancer & DNS</h4>
-<h4>Auto Scaling Group</h4>
-
-
-
-
-
-
-
-
-
+<b>1.	CodeCommit Setup</b><br>
+a. Create a CodeCommit repository to store the source code.
+<img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/CodeCommit.PNG">
+b. Create an IAM user with appropriate permissions for CodeCommit.
+<img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/IAM.PNG">
+<img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/ARN.PNG">
+<img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/Policy.PNG">
+c. Generate SSH keys locally and associate them with the IAM user for secure access.
+    <b>ssh-keygen</b>
+<img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/CodeCommit.PNG">
+d. Transfer the source code from the existing GitHub repository to the CodeCommit repository and push the changes.
+<img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/CodeCommit.PNG">
 
 
 
