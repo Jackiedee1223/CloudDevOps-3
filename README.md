@@ -21,11 +21,11 @@ By transitioning to Continuous Integration on the AWS Cloud, our project aims to
 
 <b>1.	CodeCommit Setup</b><br>
 a. Create a CodeCommit repository to store the source code.
-<img src="https://github.com/Jackiedee1223/CloudDevOps-3/tree/main/images/CodeCommit.PNG">
+<img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/CodeCommit.png">
 b. Create an IAM user with appropriate permissions for CodeCommit.
-<img src="https://github.com/Jackiedee1223/CloudDevOps-3/tree/main/images/IAM.PNG">
-<img src="https://github.com/Jackiedee1223/CloudDevOps-3/tree/main/images/ARN.PNG">
-<img src="https://github.com/Jackiedee1223/CloudDevOps-3/tree/main/images/Policy.PNG">
+<img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/IAM.png">
+<img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/ARN.png">
+<img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/Policy.png">
 c. Generate SSH keys locally and associate them with the IAM user for secure access.
     <b>ssh-keygen</b>
 <img src="https://github.com/Jackiedee1223/CloudDevOps-3/blob/main/images/CodeCommit.PNG">
